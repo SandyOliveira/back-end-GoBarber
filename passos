@@ -1,0 +1,7 @@
+criar arquivo package.json
+>>yarn init -y
+DEpendencia Express 
+>> yarn add express 
+
+Rodar servidor 
+>> node src/server.js
