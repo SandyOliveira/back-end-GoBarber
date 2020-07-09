@@ -5,3 +5,37 @@ DEpendencia Express
 
 Rodar servidor 
 >> node src/server.js
+
+Importar modulos  com sucrase e nodemon dentro do Node 
+>> yarn add sucrase nodemon -D
+troca por ex. o const app = require('./app'); por import  app from './app';
+
+Rodando servidor com sucrase
+>> yarn sucrase-node src/server.js
+
+Nodemon detecta alteração no codigo e reinicia o servidor de forma automatica
+Insira no package.json abaixo de license 
+ "scripts":{
+    "dev": "nodemon src/server.js"
+  },
+
+>> yarn dev
+
+
+Instalar DOCKER
+>> sudo apt-get upadate
+remover primeiro 
+>> sudo apt-get remove docker-engine docker.import
+>> sudo apt install docker.import
+>> sudo systemctl start docker 
+>> systemctl status docker 
+>> sudo systemctl enable docker 
+>> docker --version 
+>> sudo docker run hello-world
+Retirar o super usuario (sudo)
+>> sudo groupadd docker
+>> sudo usermod -aG docker $USER 
+reinicia a maquina 
+>> docker run hello-word 
+ver as imagens 
+>> docker images 
