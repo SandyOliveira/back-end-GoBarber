@@ -39,3 +39,27 @@ reinicia a maquina
 >> docker run hello-word 
 ver as imagens 
 >> docker images 
+
+Usando docker e database 
+>>docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres  
+>> docker ps
+
+PostBird
+>>sudo snap install postbird
+
+para startar o contenner novamente 
+>> start database
+
+verificar erros no contenner
+>> docker logs database 
+
+Instalar eslint (verifica se o codg esta seguindo padroes)
+>> yarn add eslint 
+>> yarn eslint --init 
+
+
+Instalar prettier
+>> yarn add prettier eslint-config-prettier eslint-plugin-prettier -D  
+
+salvar todos os arquivos para pegar as atualizações
+>> yarn eslint --fix src --ext .js 
