@@ -78,3 +78,8 @@ testar se esta funcionando a primeira migration
 caso ainda não enviou as migrations p/demais e deseja corrigir um erros
 >> yarn sequelize db:migrate:undo (desfaz a ultima migrate)
 >> yarn sequelize db:migrate:undo:all (desfaz todas migrate)
+
+
+
+Usar senha
+>> yarn add bcryptjs
