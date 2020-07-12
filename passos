@@ -1,12 +1,12 @@
 criar arquivo package.json
 >>yarn init -y
-DEpendencia Express 
->> yarn add express 
+DEpendencia Express
+>> yarn add express
 
-Rodar servidor 
+Rodar servidor
 >> node src/server.js
 
-Importar modulos  com sucrase e nodemon dentro do Node 
+Importar modulos  com sucrase e nodemon dentro do Node
 >> yarn add sucrase nodemon -D
 troca por ex. o const app = require('./app'); por import  app from './app';
 
@@ -14,7 +14,7 @@ Rodando servidor com sucrase
 >> yarn sucrase-node src/server.js
 
 Nodemon detecta alteração no codigo e reinicia o servidor de forma automatica
-Insira no package.json abaixo de license 
+Insira no package.json abaixo de license
  "scripts":{
     "dev": "nodemon src/server.js"
   },
@@ -24,42 +24,57 @@ Insira no package.json abaixo de license
 
 Instalar DOCKER
 >> sudo apt-get upadate
-remover primeiro 
+remover primeiro
 >> sudo apt-get remove docker-engine docker.import
 >> sudo apt install docker.import
->> sudo systemctl start docker 
->> systemctl status docker 
->> sudo systemctl enable docker 
->> docker --version 
+>> sudo systemctl start docker
+>> systemctl status docker
+>> sudo systemctl enable docker
+>> docker --version
 >> sudo docker run hello-world
 Retirar o super usuario (sudo)
 >> sudo groupadd docker
->> sudo usermod -aG docker $USER 
-reinicia a maquina 
->> docker run hello-word 
-ver as imagens 
->> docker images 
+>> sudo usermod -aG docker $USER
+reinicia a maquina
+>> docker run hello-word
+ver as imagens
+>> docker images
 
-Usando docker e database 
->>docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres  
+Usando docker e database
+>>docker run --name database -e POSTGRES_PASSWORD=docker -p 5432:5432 -d postgres
 >> docker ps
 
 PostBird
 >>sudo snap install postbird
 
-para startar o contenner novamente 
->> start database
+para startar o contenner novamente
+>> docker start database
 
 verificar erros no contenner
->> docker logs database 
+>> docker logs database
 
 Instalar eslint (verifica se o codg esta seguindo padroes)
->> yarn add eslint 
->> yarn eslint --init 
+>> yarn add eslint
+>> yarn eslint --init
 
 
 Instalar prettier
->> yarn add prettier eslint-config-prettier eslint-plugin-prettier -D  
+>> yarn add prettier eslint-config-prettier eslint-plugin-prettier -D
 
 salvar todos os arquivos para pegar as atualizações
->> yarn eslint --fix src --ext .js 
+>> yarn eslint --fix src --ext .js
+->sequelize<-
+Instalar dependencias
+>>yarn add sequelize-cli -D
+>> yarn add sequelize
+usando o postgres
+>>yarn add pg pg-hstore
+
+Criando migrations
+>> yarn sequelize migration:create --name=create-users
+testar se esta funcionando a primeira migration
+>>yarn sequelize db:migrate
+
+caso ainda não enviou as migrations p/demais e deseja corrigir um erros
+>> yarn sequelize db:migrate:undo (desfaz a ultima migrate)
+>> yarn sequelize db:migrate:undo:all (desfaz todas migrate)
