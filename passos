@@ -83,3 +83,5 @@ caso ainda não enviou as migrations p/demais e deseja corrigir um erros
 
 Usar senha
 >> yarn add bcryptjs
+token
+>>yarn add jsonwebtoken
