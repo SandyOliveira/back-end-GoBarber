@@ -85,3 +85,7 @@ Usar senha
 >> yarn add bcryptjs
 token
 >>yarn add jsonwebtoken
+
+
+lidando cm validação
+>> yarn add yup
